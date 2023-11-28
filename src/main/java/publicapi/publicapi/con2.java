@@ -77,12 +77,18 @@ public class con2 {
                             double JsonValue = Double.parseDouble(jsonObject.getString(jsonKeysForDouble[j]));
                             jsonObject.put(jsonKeysForDouble[j], JsonValue);
                         }
+                        else {
+                            jsonObject.put(jsonKeysForDouble[j], JSONObject.NULL);
+                        }
                     }
 
                     for (int j = 0; j < jsonKeysForInt.length; j++) {
                         if (!jsonObject.getString(jsonKeysForInt[j]).equals("")) {
                             int JsonValue = Integer.parseInt(jsonObject.getString(jsonKeysForInt[j]));
                             jsonObject.put(jsonKeysForInt[j], JsonValue);
+                        }
+                        else {
+                            jsonObject.put(jsonKeysForInt[j], JSONObject.NULL);
                         }
                     }
 
@@ -94,6 +100,7 @@ public class con2 {
                         String str = jsonObject.toString() + ",";
                         byte[] by = str.getBytes();
                         output.write(by);
+
                     }
                     else {
                         String str = jsonObject.toString();

@@ -5,7 +5,7 @@ Spring:
     suffix: .html
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://3.135.60.251:3306/DBproject?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://localhost:3306/dbproject?serverTimezone=Asia/Seoul
     username: dabin
     password: dabin1234
   devtools:
